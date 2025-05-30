@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: rate-limiter-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+  app:
+    build: .
+    container_name: rate-limiter-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - DEFAULT_IP_LIMIT=10
+      - DEFAULT_TOKEN_LIMIT=100
+      - BLOCK_DURATION_SECONDS=300
+      - SERVER_PORT=8080
+    volumes:
+      - .:/app
+    working_dir: /app
+
+volumes:
+  redis_data: 
