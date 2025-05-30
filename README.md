@@ -312,19 +312,7 @@ A aplicação registra:
 # - Health checks
 ```
 
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch para sua feature
-3. Faça commit das mudanças
-4. Push para a branch
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
-
-## 💡 Exemplos Práticos
+## 📈 Exemplos Práticos
 
 ### Cenário 1: API Pública
 
@@ -353,3 +341,15 @@ TOKEN_basic_plan_LIMIT=100
 TOKEN_premium_plan_LIMIT=1000
 TOKEN_enterprise_LIMIT=10000
 ``` 
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
+
+## 👨‍💻 Autor
+
+Desenvolvido por [Danilo Torchio](https://github.com/danilotorchio) como parte do projeto Go Expert.
+
+---
+
+**Nota**: Esta aplicação foi desenvolvida para fins educacionais e de demonstração. Para uso em produção, considere implementar features adicionais como logging estruturado, métricas mais detalhadas e configurações avançadas de rede. 
